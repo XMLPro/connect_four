@@ -9,8 +9,8 @@ def set_piece():
 def drop_piece(board, line, turn):
     for i in range(len(board)):
         if board[5-i][line] == 2:
-            board[5-i][line] = (turn%2) - 1
-            break
+            board[5-i][line] = ((turn - 1) % 2)
+            return board
             
 def record_board(board):
     r_board = [list(map(str, s)) for s in board]
