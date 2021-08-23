@@ -4,21 +4,25 @@
     <meta charset="utf-8"/>
     <title>コネクトフォー</title>
     <link rel="stylesheet" type="text/css" href="display.css">
+    <script type="text/javascript" src="display.js"></script>
   </head>
   <body>
     <h1>コネクトフォー</h1>
     <p id="result">赤の番です</p>
     <table id="push_table">
       <tr>
-        <td class="push_td"><span class="push"><br>PUSH!<br>↓</span></td>
-        <td class="push_td"><span class="push"><br>PUSH!<br>↓</span></td>
-        <td class="push_td"><span class="push"><br>PUSH!<br>↓</span></td>
-        <td class="push_td"><span class="push"><br>PUSH!<br>↓</span></td>
-        <td class="push_td"><span class="push"><br>PUSH!<br>↓</span></td>
-        <td class="push_td"><span class="push"><br>PUSH!<br>↓</span></td>
-        <td class="push_td"><span class="push"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col0" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col1" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col2" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col3" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col4" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col5" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col6" type="submit"><br>PUSH!<br>↓</span></td>
       </tr>
     </table>
+    <form action="game_display.html" name="dropnum" method="POST">
+      <input id="post_num" type="hidden" name="number" value="">
+    </form>
     <table id="board" border="1">
       <tr>
         <td class="circle_td"><span class="circle">&emsp;</span></td>
@@ -74,51 +78,6 @@
         <td class="circle_td"><span class="circle">&emsp;</span></td>
         <td class="circle_td"><span class="circle">&emsp;</span></td>
       </tr>
-      <!-- <tr>                                                      -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!-- </tr>                                                     -->
-      <!-- <tr>                                                      -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!-- </tr>                                                     -->
-      <!-- <tr>                                                      -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!-- </tr>                                                     -->
-      <!-- <tr>                                                      -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!-- </tr>                                                     -->
-      <!-- <tr>                                                      -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!--   <td class="circle_td"><span class="circle"></span></td> -->
-      <!-- </tr>                                                     -->
     </table>
   </body>
 </html>
