@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>コネクトフォー</h1>
-    <p id="result">赤の番です</p>
+    <h3 id="result_r">赤の番です</h3>
     <table id="push_table">
       <tr>
         <td class="push_td"><span class="push" id="push_col0" type="submit"><br>PUSH!<br>↓</span></td>
@@ -20,7 +20,7 @@
         <td class="push_td"><span class="push" id="push_col6" type="submit"><br>PUSH!<br>↓</span></td>
       </tr>
     </table>
-    <form action="game_display.html" name="dropnum" method="POST">
+    <form action="" name="dropnum" method="POST">
       <input id="post_num" type="hidden" name="number" value="">
     </form>
     <table id="board" border="1">
@@ -79,5 +79,12 @@
         <td class="circle_td"><span class="circle">&emsp;</span></td>
       </tr>
     </table>
+    <br>
+    <form action="" method="POST">
+      <div id="reset_button">
+        <input type="hidden" name="reset" value="reset">
+        <input type="submit" value="リセット">
+      </div>
+    </form>
   </body>
 </html>

@@ -2,8 +2,14 @@ h1 {
   text-align: center;
 }
 
-#result {
+#result_r {
   text-align: center;
+  color: red;
+}
+
+#result_y {
+  text-align: center;
+  color: goldenrod;
 }
 
 #push_table {
@@ -79,4 +85,8 @@ h1 {
   background-position: center;
   border-radius: 50%;
   font-size: 40px;
+}
+
+#reset_button {
+  text-align: center;
 }
