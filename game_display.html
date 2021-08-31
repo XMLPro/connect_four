@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <title>コネクトフォー</title>
+    <link rel="stylesheet" type="text/css" href="display.css">
+    <script type="text/javascript" src="display.js"></script>
+  </head>
+  <body>
+    <h1>コネクトフォー</h1>
+    <h3 id="result_r">赤の番です</h3>
+    <table id="push_table">
+      <tr>
+        <td class="push_td"><span class="push" id="push_col0" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col1" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col2" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col3" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col4" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col5" type="submit"><br>PUSH!<br>↓</span></td>
+        <td class="push_td"><span class="push" id="push_col6" type="submit"><br>PUSH!<br>↓</span></td>
+      </tr>
+    </table>
+    <form action="" name="dropnum" method="POST">
+      <input id="post_num" type="hidden" name="number" value="">
+    </form>
+    <table id="board" border="1">
+      <tr>
+        <td class="circle_td"><span class="circle_r">&emsp;</span></td>
+        <td class="circle_td"><span class="circle_y">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+      </tr>
+      <tr>
+        <td class="circle_td"><span class="circle_r">&emsp;</span></td>
+        <td class="circle_td"><span class="circle_y">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+      </tr>
+      <tr>
+        <td class="circle_td"><span class="circle_r">&emsp;</span></td>
+        <td class="circle_td"><span class="circle_y">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+      </tr>
+      <tr>
+        <td class="circle_td"><span class="circle_r">&emsp;</span></td>
+        <td class="circle_td"><span class="circle_y">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+      </tr>
+      <tr>
+        <td class="circle_td"><span class="circle_r">&emsp;</span></td>
+        <td class="circle_td"><span class="circle_y">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+      </tr>
+      <tr>
+        <td class="circle_td"><span class="circle_r">&emsp;</span></td>
+        <td class="circle_td"><span class="circle_y">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+        <td class="circle_td"><span class="circle">&emsp;</span></td>
+      </tr>
+    </table>
+    <br>
+    <form action="" method="POST">
+      <div id="reset_button">
+        <input type="hidden" name="reset" value="reset">
+        <input type="submit" value="リセット">
+      </div>
+    </form>
+  </body>
+</html>
