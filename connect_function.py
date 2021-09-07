@@ -2,20 +2,22 @@ dir_list = ["under", "right", "r_dia", "l_dia"]
 
 def set_piece():
     with open("board.txt") as f:
-        board = [list(map(int, s.strip())) for s in f.readlines()]
-    return board
-
+        line = f.readlines()
+        turn = int(line[0].strip())
+        board = [list(map(int, s.strip())) for s in line[1:]]
+    return board, turn
 
 def drop_piece(board, line, turn):
     for i in range(len(board)):
         if board[5-i][line] == 2:
-            board[5-i][line] = ((turn - 1) % 2)
+            board[5-i][line] = ((turn-1)%2)
             return board
             
-def record_board(board):
+def record_board(board, turn):
     r_board = [list(map(str, s)) for s in board]
     with open("board.txt", mode='w') as f:
         txt = ""
+        txt += str(turn+1) + "\n"
         for i in r_board:
             for j in i:
                 txt += j
@@ -42,5 +44,5 @@ def check_piece(board, pl, x_place, y_place, direction):
 
 def reset_board():
     board = [[2]*7 for s in range(6)]
-    record_board(board)
+    record_board(board, 0)
     return board
