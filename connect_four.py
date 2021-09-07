@@ -1,4 +1,4 @@
-#! usr/bin/python3
+#! /usr/bin/python3
 
 import cgi
 import connect_function as func
@@ -14,14 +14,15 @@ with open(file) as f:
   content = f.readlines()
 board, turn = func.set_piece()
 
-#l = get------
-if l == "reset":
+form = cgi.FieldStorage()
+l = form.getvalue("number")
+l = 1
+
+if l == -1:
   board = func.reset_board()
-  turn = 1
 else:
   board = func.drop_piece(board, int(l), turn)
-  func.record_board(board)
-  turn += 1
+  func.record_board(board, turn)
 
 for i in range(6):
   for j in range(7):
