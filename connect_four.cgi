@@ -16,19 +16,20 @@ board, turn = func.set_piece()
 
 form = cgi.FieldStorage()
 l = form.getvalue("number")
-l = 1
+if l != None:
+    l = int(l)
 
-if l == -1:
+if l == -1 or l == None:
   board = func.reset_board()
 else:
-  board = func.drop_piece(board, int(l), turn)
+  board = func.drop_piece(board, l, turn)
   func.record_board(board, turn)
 
 for i in range(6):
   for j in range(7):
     for d in func.dir_list:
       if (func.check_piece(board, board[i][j], j, i, d) == 4):
-        end_txt = "Thank You For Playing!!!"
+        end_txt = "<h2>Thank You For Playing!!!</h2>"
         victory = 1
         break
     else:
@@ -64,5 +65,7 @@ for txt in content:
       htmlText += """</tr>"""
   else:
     htmlText += txt
+    if "h1" in txt and victory:
+        htmlText += end_txt
 
 print(htmlText.encode("utf-8", 'ignore').decode('utf-8'))
