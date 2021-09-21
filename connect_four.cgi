@@ -44,12 +44,15 @@ for txt in content:
     flag = 0
   if flag:
     continue
+  
+  if victory and "↓" in txt:
+    continue
 
   if 'id="result' in txt:
     if turn % 2:
-      htmlText += '<h3 id="result_r">赤の番です</h3>'
+      htmlText += '<h3 id="result_r">黄の番です</h3>'
     else:
-      htmlText += '<h3 id="result_y">黄の番です</h3>'
+      htmlText += '<h3 id="result_y">赤の番です</h3>'
   elif 'id="board' in txt:
     htmlText += txt
     flag = 1
